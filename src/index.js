@@ -10,8 +10,8 @@ async function awaitPicture() {
     // This also returns a Promise so it must be waited for
     const arrBuff = await response.arrayBuffer();
 
-    // If the picture is 6KB or larger, reject the image.
-    if (arrBuff.byteLength >= 6 * 1024) {
+    // If the picture is 7KB or larger, reject the image.
+    if (arrBuff.byteLength >= 7 * 1024) {
       throw new Error(
         `Sorry. The image is too large: ${parseInt(
           arrBuff.byteLength / 1024,
